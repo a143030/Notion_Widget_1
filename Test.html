@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Widget</title>
+</head>
+<body>
+    <script>
+        // JavaScript code snippet here
+        function createDateWidget() {
+            var dateDiv = document.createElement("div");
+            var today = new Date();
+            var formattedDate = today.toLocaleDateString("en-US", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
+            dateDiv.textContent = "Today's date is: " + formattedDate;
+            dateDiv.style.padding = "10px";
+            dateDiv.style.backgroundColor = "#f0f0f0";
+            dateDiv.style.border = "1px solid #ccc";
+            document.body.appendChild(dateDiv);
+        }
+        createDateWidget();
+    </script>
+</body>
+</html>
